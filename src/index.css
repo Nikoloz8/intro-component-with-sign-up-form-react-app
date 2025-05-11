@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+html {
+    line-height: 10px;
+    font-size: 10px;
+}
+
+body {
+    background-image: url("./../public/images/bg-intro-desktop.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #FF7979;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+
+.form-container {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+form {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 0 0 #00000025;
+    border-radius: 10px;
+    padding: 40px;
+    gap: 20px;
+}
+
+form button {
+    background-color: #38CC8B;
+    border: none;
+    box-shadow: 0 4px 0 0 #43b97f;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    height: 56px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #77E2B3;
+}
+
+form button:active {
+    background-color: #9df6cf;
+}
+
+
+form h5,
+form h5 span {
+    font-size: 1.1rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    color: #BAB7D4;
+}
+
+form h5 {
+    text-align: center;
+}
+
+form h5 span {
+    font-weight: 700;
+    color: #f97a79;
+}

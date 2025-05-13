@@ -10,7 +10,6 @@ function App() {
   let [lastName, setLastName] = useState("")
   let [email, setEmail] = useState("")
   let [password, setPassword] = useState("")
-  let [validated, setValidated] = useState([])
 
 
   return (

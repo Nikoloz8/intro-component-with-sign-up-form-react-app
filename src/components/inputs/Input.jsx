@@ -1,3 +1,4 @@
+import { useState } from "react"
 import "./input.css"
 
 export default function Input({ firstName, lastName, email, password, setFirstName, setLastName, setEmail, setPassword }) {
@@ -19,15 +20,18 @@ export default function Input({ firstName, lastName, email, password, setFirstNa
 
     const Validate = (value) => value.trim() === ""
 
+    let [focus, setFocus] = useState()
+
     return (
         inputs.map((e, index) => (
             <div className='input-container' key={index}>
                 <input
                     type={e.type}
                     value={e.value}
+                    onFocus={() => setFocus(index)}
                     onChange={el => { e.setFunc(el.target.value) }}
                     style={
-                        Validate(e.value) ?
+                        Validate(e.value) && focus === index ? 
                             {
                                 border: "2px solid #FF7979",
                                 backgroundImage: "url('/images/icon-error.svg')"
@@ -35,7 +39,7 @@ export default function Input({ firstName, lastName, email, password, setFirstNa
                     }
                     placeholder={e.placeholder}
                 />
-                <h6 style={{ display: Validate(e.value) ? "block" : "none" }}>{e.errorText}</h6>
+                <h6 style={{ display: Validate(e.value) && focus === index ? "block" : "none" }}>{e.errorText}</h6>
             </div>
         )))
 }

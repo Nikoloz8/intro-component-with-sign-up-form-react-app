@@ -90,3 +90,26 @@ form h5 span {
     font-weight: 700;
     color: #f97a79;
 }
+
+@media screen and (max-width: 1150px) {
+    #root {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #root{
+        gap: 50px;
+        padding: 50px 0 50px 0;
+    }
+
+    .form-container{
+        width: 100%;
+    }
+
+    .text-container{
+        width: 100% !important;
+    }
+}
